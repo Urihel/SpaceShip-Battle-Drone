@@ -1,4 +1,4 @@
-# SpaceShip-Battle-Drone
+# SpaceShip-fighter
 
 # Purpose of Project
 to utilize web development technologies to develop games.
