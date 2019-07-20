@@ -10,10 +10,13 @@ So like many, i too have played the metroids atari game or spaceship galaxtica a
 html, css, javascript
 
 # known bugs
-you can now use the s key to fire at the enemeies with the lazerBeam. The lazer beam duplicates itself before rendering a second lazerBeam that uses the the setInterval function which sends the lazer 5px down every 1 second. 
+No know bugs 
 
 # to be added to the game 
 1. the enemies that will fire back at me and who i will be shooting the lazers too. 
 2. some music to keep the levels fun. 
 3. i need to set true and false values to the img-container so that the ship never goes beyond where it's supposed too. 
 4. fix the lazer bug
+
+# Updates:
+1. removed the bug that was causing the lazerBeam to duplicate itself then sending the second one to the bottom with the setInterval Function ().You should now be able to move the spaceship in any direction with any bugs, and you should be able to use the s key freely and have the lazer beam shoot to the top of the background instead of downwards. 
