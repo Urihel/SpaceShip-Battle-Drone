@@ -38,9 +38,7 @@ window.addEventListener("keydown", function (e) {
         y += 5;
         x.style.top = y + 'px';
     }
-    else if (keycode === 83) {  // S keyboard key 
-        console.log("fire button is working");
-    }
+   
 });
 
     //we need lvl opponents to appear
@@ -74,20 +72,14 @@ function spaceshipTurret() {
        lazerBeam.style.height ="30px";
        lazerBeam.style.width="2px";
        lazerBeam.style.position = "absolute";
-      
-
-       
        var z =  parseInt(getComputedStyle(lazerBeam).top);
-        console.log(z);
-        e.preventDefault();
-        z -= 5;
-        lazerBeam.style.top = z + 'px';
-       
-       
-       
+       console.log(z);
+       e.preventDefault();
+       z -= 5;
+       lazerBeam.style.top = z + 'px';
+       }
+    },100);
     }
-    },1000);
-    }
-    });
+  });
 }
 spaceshipTurret();
