@@ -5,140 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        #img-container {
-            background: url("https://i.ytimg.com/vi/RY4uivIh-ik/maxresdefault.jpg");
-            background-size: 100% 100%;
-            border: 1px solid red;
-            height: 400px;
-            position: relative;
-            top: 10px;
-            left: 10px;
-            width: 600px;
-        }
-        #triangle  {
-            
-            /*border-top: 60px solid black;*/
-            border-right: 40px solid transparent;
-            border-bottom: 40px solid green;
-            border-left: 40px solid transparent;
-            height: 0px;
-            position: absolute;
-            top: 50px;
-            left: 30px;
-            width: 0px;
-        }
-
-       
-         
-    </style>
+    <link rel="stylesheet" href="SpaceBattleDrone.css">
+    <script src="SpaceBattleDrone.js"></script>
 </head>
 <body>
     <div id="img-container">
-        <!-- The turret is the turret for the spaceship which will shoot at the enemies -->
-        <!-- <div id="turret"></div>  -->
+        <!-- title of the game is SpaceShip Fighter -->
+        <!-- the id named triangle is the spaceship -->
+        <!-- you can you the arrow keys on the keyboard to move the spaceship around -->
+        <!-- you can also use the s key to shoot a lazer out that moves to the top of the div -->
+        <!-- the game is still in development but hope you enjoy the documentation that was used to build it -->
         <div id="triangle"></div>
-    </div>
-    
-    <script>
-        
-
-        window.addEventListener("keydown", function (e) {
-            var keycode = e.which || e.code;
-            console.log(e);
-            if(keycode === 37) {
-                var x = document.getElementById('triangle');
-                console.log(x);
-                var y = parseInt(getComputedStyle(x).left);
-                console.log(y);
-                e.preventDefault();
-                y -= 5;
-                x.style.left = y + 'px';
-            }
-            else if(keycode === 38) {
-                
-                var x = document.getElementById('triangle');
-                console.log(x);
-                var y = parseInt(getComputedStyle(x).top);
-                console.log(y);
-                e.preventDefault();
-                y -= 5;
-                x.style.top = y + 'px';
-            }
-            else if(keycode === 39) {
-                var x = document.getElementById('triangle');
-                console.log(x);
-                var y = parseInt(getComputedStyle(x).left);
-                console.log(y);
-                e.preventDefault();
-                y += 5;
-                x.style.left = y + 'px';
-            }
-            else if( keycode === 40) {
-                var x = document.getElementById('triangle');
-                console.log(x);
-                var y = parseInt(getComputedStyle(x).top);
-                console.log(y);
-                e.preventDefault();
-                y += 5;
-                x.style.top = y + 'px';
-            }
-            else if (keycode === 83) {  // S keyboard key 
-                console.log("fire button is working");
-            }
-        });
-            // create a loop for the background so that ship is traveling
-            // or have enemies appear from top div
-            //use set interval to work with s key function to fire the shot out 
-            //we need lvl opponents to appear
-            //make ship super responsive
-            //create opponents for 1 levels worth of game
-            //have opponents fire back 
-            //create shot fire bonuses.
-
-        function spaceshipTurret() {
-            window.addEventListener("keydown",function (e) {
-            var newkey = e.which || e.code;
-            if (newkey === 83) {  // S keyboard key 
-            console.log("fire button is working");
-            // second part of the code which will fire the laser when the s key is pressed. 
-                var x = setInterval(function() {
-               
-               
-                
-                //---------------------------------------------------------------------------------------------------------------------
-            var bool = true;
-            if(bool === true) {
-               var shape = document.getElementById("triangle");
-               var laser = document.createElement("div");
-               var lazerBeam = document.getElementById("laser"); 
-               console.log(shape);
-               shape.appendChild(laser);
-               laser.id ="laser";
-               console.log(laser);
-               lazerBeam.style.background = "red";
-               lazerBeam.style.border="1px solid red";
-               lazerBeam.style.height ="30px";
-               lazerBeam.style.width="2px";
-               lazerBeam.style.position = "absolute";
-              
-
-               
-               var z =  parseInt(getComputedStyle(lazerBeam).top);
-                console.log(z);
-                e.preventDefault();
-                z -= 5;
-                lazerBeam.style.top = z + 'px';
-               
-               
-               
-            }
-            },1000);
-            }
-            });
-        }
-        spaceshipTurret();
-    </script>
-    
+    </div>    
 </body>
 </html>
