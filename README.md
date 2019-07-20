@@ -19,4 +19,4 @@ No know bugs
 4. fix the lazer bug
 
 # Updates:
-1. removed the bug that was causing the lazerBeam to duplicate itself then sending the second one to the bottom with the setInterval Function ().You should now be able to move the spaceship in any direction with any bugs, and you should be able to use the s key freely and have the lazer beam shoot to the top of the background instead of downwards. 
+1. removed the bug that was causing the lazerBeam to duplicate itself then sending the second one to the bottom with the setInterval Function ().You should now be able to move the spaceship in any direction without any iussue, and you should be able to use the s key useand the lazer beam shoot to the top of the background instead of downwards. 
