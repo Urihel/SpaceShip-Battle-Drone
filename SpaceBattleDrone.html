@@ -22,18 +22,15 @@
             border-right: 40px solid transparent;
             border-bottom: 40px solid green;
             border-left: 40px solid transparent;
-            height: 0;
+            height: 0px;
             position: absolute;
             top: 50px;
             left: 30px;
-            width: 0;
+            width: 0px;
         }
-        /* #turret { 
-             background-color: red;
-            border: 1px solid black;
-            height: 35px;
-            width: 2px;
-        }*/
+
+       
+         
     </style>
 </head>
 <body>
@@ -86,7 +83,10 @@
                 y += 5;
                 x.style.top = y + 'px';
             }
-         });
+            else if (keycode === 83) {  // S keyboard key 
+                console.log("fire button is working");
+            }
+        });
             // create a loop for the background so that ship is traveling
             // or have enemies appear from top div
             //use set interval to work with s key function to fire the shot out 
@@ -103,10 +103,8 @@
             console.log("fire button is working");
             // second part of the code which will fire the laser when the s key is pressed. 
                 var x = setInterval(function() {
-                var now = new Date().getTime();
-                var distance = now - 0;
-                var seconds = Math.floor((distance % (1000 * 15)) / 1000);
-                console.log(seconds);
+               
+               
                 
                 //---------------------------------------------------------------------------------------------------------------------
             var bool = true;
@@ -121,6 +119,19 @@
                laser.style.border="1px solid red";
                laser.style.height ="30px";
                laser.style.width="2px";
+               laser.style.position = "absolute";
+               var laserBeamMovement = document.getElementById("laser");
+               console.log(laserBeamMovement);
+
+               var lazerBeam = document.getElementById("laser"); 
+               var z =  parseInt(getComputedStyle(lazerBeam).top);
+                console.log(z);
+                e.preventDefault();
+                z += 5;
+                lazerBeam.style.top = z + 'px';
+               
+               
+               
             }
             },1000);
             }
