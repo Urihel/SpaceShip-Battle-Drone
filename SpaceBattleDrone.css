@@ -1,0 +1,22 @@
+#img-container {
+    background: url("https://i.ytimg.com/vi/RY4uivIh-ik/maxresdefault.jpg");
+    background-size: 100% 100%;
+    border: 1px solid red;
+    height: 400px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 600px;
+}
+#triangle  {
+    
+    /*border-top: 60px solid black;*/
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid green;
+    border-left: 40px solid transparent;
+    height: 0px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 0px;
+}
