@@ -111,23 +111,23 @@
             if(bool === true) {
                var shape = document.getElementById("triangle");
                var laser = document.createElement("div");
+               var lazerBeam = document.getElementById("laser"); 
                console.log(shape);
                shape.appendChild(laser);
                laser.id ="laser";
                console.log(laser);
-               laser.style.background = "red";
-               laser.style.border="1px solid red";
-               laser.style.height ="30px";
-               laser.style.width="2px";
-               laser.style.position = "absolute";
-               var laserBeamMovement = document.getElementById("laser");
-               console.log(laserBeamMovement);
+               lazerBeam.style.background = "red";
+               lazerBeam.style.border="1px solid red";
+               lazerBeam.style.height ="30px";
+               lazerBeam.style.width="2px";
+               lazerBeam.style.position = "absolute";
+              
 
-               var lazerBeam = document.getElementById("laser"); 
+               
                var z =  parseInt(getComputedStyle(lazerBeam).top);
                 console.log(z);
                 e.preventDefault();
-                z += 5;
+                z -= 5;
                 lazerBeam.style.top = z + 'px';
                
                
