@@ -10,7 +10,7 @@ So like many, i too have played the metroids atari game or spaceship galaxtica a
 html, css, javascript
 
 # known bugs
-there is a bug in the setInterval function which continues to increase the size of the laser div when it should be pushing it towards the top the window rather than down.
+you can now use the s key to fire at the enemeies with the lazerBeam. The lazer beam duplicates itself before rendering a second lazerBeam that uses the the setInterval function which sends the lazer 5px down every 1 second. 
 
 # to be added to the game 
 1. the enemies that will fire back at me and who i will be shooting the lazers too. 
